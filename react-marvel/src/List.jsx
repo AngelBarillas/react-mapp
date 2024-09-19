@@ -22,7 +22,7 @@ export default function List({ characters }) {
           })}
         </ul>
       </div>
-      <button>See more</button>
+      <button className="btn more-btn">See more</button>
     </>
   );
 }
