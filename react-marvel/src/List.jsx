@@ -1,5 +1,5 @@
 import ListCards from "./ListCards";
-
+import { useState } from "react";
 export default function List({ characters }) {
   return (
     <>
@@ -8,7 +8,7 @@ export default function List({ characters }) {
           {characters.map((char) => {
             return (
               <>
-                <li className="list-item" key={char.id}>
+                <li className="list-item">
                   <img
                     className="char-img-container"
                     src={`${char.thumbnail.path}/portrait_xlarge.jpg`}
@@ -22,7 +22,6 @@ export default function List({ characters }) {
           })}
         </ul>
       </div>
-      <button className="btn more-btn">See more</button>
     </>
   );
 }
