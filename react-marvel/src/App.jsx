@@ -4,7 +4,7 @@ import "./App.css";
 import SearchBar from "./SearchBar";
 import Title from "./Title";
 import List from "./List";
-export default function App() {
+export default function App(isSearch) {
   const [characters, setCharacters] = useState([]);
   const [offset, setOffset] = useState(0);
 
@@ -34,6 +34,7 @@ export default function App() {
   const handleMoreClick = function () {
     setOffset(characters.length);
   };
+
   return (
     <>
       <SearchBar />

@@ -11,7 +11,7 @@ export default function List({ characters }) {
                 <li className="list-item">
                   <img
                     className="char-img-container"
-                    src={`${char.thumbnail.path}/portrait_xlarge.jpg`}
+                    src={`${char.thumbnail.path}/portrait_incredible.jpg`}
                   ></img>
                   <a className="char-name" href="">
                     {char.name}
