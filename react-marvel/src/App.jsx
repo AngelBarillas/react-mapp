@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
-
+import React from "react";
 import "./App.css";
 import SearchBar from "./SearchBar";
 import Title from "./Title";
 import List from "./List";
-export default function App(isSearch) {
+
+const App = function () {
   const [characters, setCharacters] = useState([]);
   const [offset, setOffset] = useState(0);
+
+  const handleMoreClick = function () {
+    setOffset(characters.length);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,13 +36,9 @@ export default function App(isSearch) {
     fetchData();
   }, [offset]);
 
-  const handleMoreClick = function () {
-    setOffset(characters.length);
-  };
-
   return (
     <>
-      <SearchBar />
+      <SearchBar setCharacters={setCharacters} />
       <Title title="Marvel Universe Characters" />
       {characters && <List characters={characters} />}
       <button onClick={handleMoreClick} className="btn more-btn">
@@ -45,4 +46,6 @@ export default function App(isSearch) {
       </button>
     </>
   );
-}
+};
+
+export default App;

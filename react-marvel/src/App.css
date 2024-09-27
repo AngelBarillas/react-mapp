@@ -80,7 +80,7 @@ img:hover {
   color: rgb(38, 38, 38);
 }
 
-#character-container {
+.character-container {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 1fr 90%;
@@ -92,16 +92,14 @@ img:hover {
   margin-right: 1rem;
   margin-top: 15%;
 }
-#name-container {
+.name-container {
   color: rgb(38, 38, 38);
   grid-column: 1;
   grid-row: 1;
   margin: 2em;
-  margin-top: 0;
-  margin-bottom: 0;
   white-space: nowrap;
 }
-#desc-container {
+.desc-container {
   color: rgb(38, 38, 38);
   grid-column: 2;
   grid-row: 2;
@@ -113,7 +111,7 @@ img:hover {
   margin-bottom: 0;
 }
 
-#img-container {
+.img-container {
   grid-row: 2;
   grid-column: 1;
   margin: 2em;
@@ -132,18 +130,18 @@ img:hover {
   #search-container {
     grid-template-columns: 80% 15% 5%;
   }
-  #character-container {
+  .character-container {
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr 90%;
     grid-column-gap: 1.5em;
     margin: 10em;
   }
-  #img-container {
+  .img-container {
     grid-row: 2;
     grid-column: 1;
     margin-left: 6em;
   }
-  #name-container {
+  .name-container {
     margin-left: 6em;
   }
   #search-char-desc {

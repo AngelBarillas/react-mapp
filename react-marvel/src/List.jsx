@@ -3,8 +3,8 @@ import { useState } from "react";
 export default function List({ characters }) {
   return (
     <>
-      <div>
-        <ul className="character-list">
+      <div id="char-list-container">
+        <ul id="char-list" className="character-list">
           {characters.map((char) => {
             return (
               <>
@@ -13,7 +13,11 @@ export default function List({ characters }) {
                     className="char-img-container"
                     src={`${char.thumbnail.path}/portrait_incredible.jpg`}
                   ></img>
-                  <a className="char-name" href="">
+                  <a
+                    target="_blank"
+                    className="char-name"
+                    href={`/character/${char.id}`}
+                  >
                     {char.name}
                   </a>
                 </li>
