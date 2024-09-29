@@ -8,18 +8,25 @@ export default function List({ characters }) {
           {characters.map((char) => {
             return (
               <>
-                <li className="list-item">
+                <li className="card" key={char.id}>
                   <img
-                    className="char-img-container"
+                    className="card"
                     src={`${char.thumbnail.path}/portrait_incredible.jpg`}
                   ></img>
-                  <a
-                    target="_blank"
-                    className="char-name"
-                    href={`/character/${char.id}`}
-                  >
-                    {char.name}
-                  </a>
+                  <div className="details">
+                    <label className="details" htmlFor="">
+                      <a
+                        className="anton-sc-regular details"
+                        target="_blank"
+                        href={`/character/${char.id}`}
+                      >
+                        {char.name}
+                      </a>
+                    </label>
+                    <p className="anton-sc-regular">
+                      <i>Click on my name to learn more</i>
+                    </p>
+                  </div>
                 </li>
               </>
             );
@@ -29,3 +36,26 @@ export default function List({ characters }) {
     </>
   );
 }
+
+/*<div class="card">
+  <div class="remove-when-use">
+    <label>Hover over me to show details</label>
+  </div>
+  <div class="details">
+    <label>Title</label>
+    <p>
+      <i>Click to learn more</i>
+    </p>
+  </div>
+</div>
+*/
+
+/*
+<div class="card">
+<div class="card-img"> </div>
+
+<div class="card-info">
+<p class="title">Name</p>
+<p class="subtitle">Web Dev</p>
+</div>
+</div>*/

@@ -21,18 +21,22 @@ export default function SearchBar({ setCharacters }) {
 
   return (
     <>
-      <div>
+      <div className="search-container">
         <input
-          className="search-input"
+          required=""
+          className="anton-sc-regular search-input"
           type="text"
-          placeholder="Character?"
+          placeholder="Look one up!"
           id="search-input"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit" onClick={handleSearch} className="btn search-btn">
+        <button
+          type="submit"
+          onClick={handleSearch}
+          className="anton-sc-regular neu-button"
+        >
           Search
         </button>
-        {isSearch}
       </div>
     </>
   );

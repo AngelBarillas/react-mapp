@@ -41,7 +41,7 @@ const App = function () {
       <SearchBar setCharacters={setCharacters} />
       <Title title="Marvel Universe Characters" />
       {characters && <List characters={characters} />}
-      <button onClick={handleMoreClick} className="btn more-btn">
+      <button onClick={handleMoreClick} className="anton-sc-regular">
         See more
       </button>
     </>
