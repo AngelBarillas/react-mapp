@@ -12,18 +12,19 @@ export default function List({ characters }) {
                   <img
                     className="card"
                     src={`${char.thumbnail.path}/portrait_incredible.jpg`}
+                    alt={`image of ${char.name}`}
                   ></img>
                   <div className="details">
                     <label className="details" htmlFor="">
                       <a
-                        className="anton-sc-regular details"
+                        className="details"
                         target="_blank"
                         href={`/character/${char.id}`}
                       >
                         {char.name}
                       </a>
                     </label>
-                    <p className="anton-sc-regular">
+                    <p className="">
                       <i>Click on my name to learn more</i>
                     </p>
                   </div>

@@ -4,6 +4,7 @@ import "./App.css";
 import SearchBar from "./SearchBar";
 import Title from "./Title";
 import List from "./List";
+import Hero from "./assets/Hero";
 import { fetch_status } from "./assets/fetchstatus";
 
 const App = function () {
@@ -17,7 +18,9 @@ const App = function () {
 
   useEffect(() => {
     const fetchData = async () => {
-      setStatus(fetch_status.loading);
+      if (offset === 0) {
+        setStatus(fetch_status.loading);
+      }
       const response = await fetch(
         `https://gateway.marvel.com/v1/public/characters?offset=${offset}&apikey=c5b21bcd83f9cb497db19d4a57fb1837`
       );
@@ -48,10 +51,9 @@ const App = function () {
   if (status === fetch_status.success) {
     return (
       <>
-        <SearchBar setCharacters={setCharacters} />
-        <Title title="Marvel Universe Characters" />
+        <Hero setCharacters={setCharacters} />
         {characters && <List characters={characters} />}
-        <button onClick={handleMoreClick} className="anton-sc-regular">
+        <button onClick={handleMoreClick} className=" more-btn">
           See more
         </button>
       </>

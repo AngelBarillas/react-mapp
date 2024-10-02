@@ -34,13 +34,13 @@ export default function ListCards() {
     return (
       <>
         <div className="character-container">
-          <p className="anton-sc-regular name-container">{character.name}</p>
+          <p className="name-container">{character.name}</p>
           <img
             className="img-container"
             src={`${character.thumbnail.path}/portrait_incredible.jpg`}
             alt={`${character.name} image`}
           />
-          <p className="anton-sc-regular desc-container">
+          <p className="desc-container">
             {character.description
               ? character.description
               : "Sorry, there is no description available for this character"}
