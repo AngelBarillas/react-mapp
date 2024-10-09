@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./App.css";
-import SearchBar from "./SearchBar";
-import Title from "./Title";
 import List from "./List";
-import Hero from "./assets/Hero";
+import Hero from "./Hero";
 import { fetch_status } from "./assets/fetchstatus";
 import Loader from "./Loader";
 
@@ -39,6 +37,7 @@ const App = function () {
       } else {
         const apiChar = apiData.data.results;
         setCharacters(apiChar);
+        console.log(apiChar);
         setStatus(fetch_status.success);
         console.log(offset);
       }

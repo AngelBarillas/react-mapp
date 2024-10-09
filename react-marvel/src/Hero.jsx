@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SearchBar from "../SearchBar";
-import Title from "../Title";
+import SearchBar from "./SearchBar";
+import Title from "./Title";
 
 export default function Hero({ setCharacters }) {
   const appDesc =

@@ -293,7 +293,7 @@ button:hover::before {
 
 @media only screen and (min-width: 768px) {
   .character-list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   .card {
     width: auto;

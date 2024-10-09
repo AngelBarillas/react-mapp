@@ -1,6 +1,4 @@
 import { useState } from "react";
-import List from "./List";
-import Title from "./Title";
 
 export default function SearchBar({ setCharacters }) {
   const [isSearch, setSearch] = useState("");

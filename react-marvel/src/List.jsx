@@ -11,7 +11,7 @@ export default function List({ characters }) {
                 <li className="card" key={char.id}>
                   <img
                     className="card"
-                    src={`${char.thumbnail.path}/portrait_incredible.jpg`}
+                    src={`${char.thumbnail.path}/portrait_incredible.${char.thumbnail.extension}`}
                     alt={`image of ${char.name}`}
                   ></img>
                   <div className="details">
