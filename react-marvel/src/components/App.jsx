@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import "./App.css";
+import "../assets/App.css";
 import List from "./List";
 import Hero from "./Hero";
-import { fetch_status } from "./assets/fetchstatus";
+import { fetch_status } from "../assets/fetchstatus";
 import Loader from "./Loader";
+import NavBar from "./NavBar";
 
 const App = function () {
   const [characters, setCharacters] = useState([]);
