@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetch_status } from "../assets/fetchstatus";
+import React from "react";
 export default function ListCards() {
   let { charId } = useParams();
   const [character, setCharacter] = useState();
