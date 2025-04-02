@@ -54,7 +54,9 @@ const App = function () {
     return (
       <>
         <Hero setCharacters={setCharacters} />
+
         {characters && <List characters={characters} />}
+
         <button onClick={handleMoreClick} className=" more-btn">
           See more
         </button>
